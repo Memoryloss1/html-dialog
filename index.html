@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color: rgb(26, 27, 26);
+            border-radius: 5px;
+            width: 70px;
+            height: 30px;
+            color: white;
+            margin: 5px;
+        }
+
+        dialog{
+            width: 350px;
+            text-align: center;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <button id="open">Giriş yap</button>
+
+     <dialog>
+         <form action="">
+            <p><input type="text" placeholder="Yazı"></p> 
+            <p><input type="text"></p> 
+            <p><button type="submit">Giriş Yap</button> 
+            <button id="kapat">Kapat</button> </p>
+        </form>
+     </dialog>
+
+     <script>
+
+         var modal = document.querySelector("dialog");
+         document.querySelector("#open").onclick = function() {
+
+             modal.showModal();
+         }
+
+         document.querySelector("#kapat").onclick = function(){
+             modal.close();
+             return false;
+         }
+
+
+     </script>
+</body>
+</html>
